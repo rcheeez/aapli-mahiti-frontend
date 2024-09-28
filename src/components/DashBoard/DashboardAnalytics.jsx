@@ -42,7 +42,7 @@ export default function DashboardAnalytics() {
     datasets: [
       {
         label: "New Entries Over Time",
-        data: [0, 0, 0, 1, 2, 0, 4, 2,],
+        data: [0, 0, 0, 1, 2, 0, 4, 2, 5, 3, 2, 5],
         fill: false,
         borderColor: "rgb(60, 145, 230)",
         tension: 0.1,

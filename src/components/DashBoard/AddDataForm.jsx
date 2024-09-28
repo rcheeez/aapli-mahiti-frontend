@@ -42,16 +42,17 @@ export default function AddDataForm() {
 
       try {
 		setLoading(true);
-        const response = await addPeopleData(values);
-		    console.log(response);
-
+        await addPeopleData(values);
         setTimeout(() => {
           navigate("/dashboard", {state: {message: "Person Data Added Succesfully!", visible: true}});
-        }, 2000);
+        }, 500);
 		setLoading(false);
       } catch (myerror) {
         setError("Failed to add Data!");
-        navigate("/dashboard", {state: {message: error, visible: true}});
+        setTimeout(() => {
+          navigate("/dashboard", {state: {message: error, visible: true}});
+        }, 1000);
+        setLoading(false);
       } finally {
         //setLoading(false);
         setSubmitting(false);
